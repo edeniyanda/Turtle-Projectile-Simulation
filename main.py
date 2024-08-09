@@ -6,7 +6,7 @@ screen = t.Screen()
 screen.title("Projectile Motion Simulation")
 
 
-scale = 2
+scale = 1.5
 
 projectile = t.Turtle()
 projectile.shape("circle")
@@ -38,8 +38,8 @@ def simulate_projectile(v0, angle, g=9.8):
     # projectile.hideturtle()
 
 # Set initial conditions
-u0 = 70  # m/s
-theta = 60    # degrees
+u0 = 80  # m/s
+theta = 70   # degrees
 g = 9.8
 
 R = ((u0 ** 2) * math.sin(math.radians(2 * theta)) / g) * scale
