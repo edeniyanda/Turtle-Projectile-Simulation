@@ -78,5 +78,5 @@ class ProjectileSimulator:
         self.screen.exitonclick()
 
 
-simulator = ProjectileSimulator(v0=80, angle=70)
-simulator.run_simulation()
+# simulator = ProjectileSimulator(v0=80, angle=70)
+# simulator.run_simulation()

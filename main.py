@@ -22,7 +22,7 @@ def simulate_projectile(v0, angle, g=9.8):
     T = (2 * v0 * math.sin(angle_rad)) / g
     
     # time chanfges in interval
-    dt = 0.01 
+    dt = 0.09 
     
     t = 0
     while t <= T:
@@ -37,9 +37,14 @@ def simulate_projectile(v0, angle, g=9.8):
     
     # projectile.hideturtle()
 
+
+
+
+
+
 # Set initial conditions
-u0 = 80  # m/s
-theta = 70   # degrees
+u0 = 100  # m/s
+theta = 70  # degrees
 g = 9.8
 
 R = ((u0 ** 2) * math.sin(math.radians(2 * theta)) / g) * scale
