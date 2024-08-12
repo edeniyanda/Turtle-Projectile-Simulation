@@ -29,17 +29,12 @@ class MainWindow(QMainWindow, ui):
         self.pushButton_simulate.clicked.connect(self.getValues)
 
     def getValues(self):
+
         initialvelocity = int(self.lineEditVelocity.text())
         angle_of_projection = int(self.spinBoxtheta.text())
-        g = int(self.spinBox_g.text())
-        scale = float(self.spinBox_scale.text())
-        scale = scale if scale != 0 else 1.5
-        time = float(self.spinBox_time.text())
-        time = time if time != 0 else 0.1
 
-
-        simulator = ProjectileSimulator(initialvelocity, angle_of_projection, g, scale, time)
-        simulator.run_simulation()
+        # simulator = ProjectileSimulator(initialvelocity, angle_of_projection, g, scale, time)
+        # simulator.run_simulation()
 
 
 

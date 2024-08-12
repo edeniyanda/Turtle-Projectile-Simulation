@@ -43,7 +43,7 @@ def simulate_projectile(v0, angle, g=9.8):
 
 
 # Set initial conditions
-u0 = 100  # m/s
+u0 = 70  # m/s
 theta = 70  # degrees
 g = 9.8
 
