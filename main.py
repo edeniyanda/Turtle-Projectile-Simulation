@@ -20,9 +20,10 @@ def simulate_projectile(v0, angle, g=9.8):
 
     # Time of FLight
     T = (2 * v0 * math.sin(angle_rad)) / g
+    print(f"The the time of flight is {T}s ")
     
     # time chanfges in interval
-    dt = 0.09 
+    dt = 1
     
     t = 0
     while t <= T:
@@ -44,14 +45,17 @@ def simulate_projectile(v0, angle, g=9.8):
 
 # Set initial conditions
 u0 = 70  # m/s
-theta = 70  # degrees
+theta = 45 # degrees
 g = 9.8
 
 R = ((u0 ** 2) * math.sin(math.radians(2 * theta)) / g) * scale
 H = ((u0 ** 2) * (math.sin(math.radians(theta)) ** 2) / (2 * g) ) * scale
 
+# Time of FLight
+T = (2 * u0 * math.sin(math.radians(theta))) / g
+print(f"The the time of flight is {T}s ")
 # Set up t speed
-projectile.speed(1)
+projectile.speed()
 projectile.penup()
 # projectile.goto(0, 0)
 projectile.pendown()

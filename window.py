@@ -25,8 +25,7 @@ class MainWindow(QMainWindow, ui):
         super().__init__()
         self.setupUi(self)
         self.setFixedSize(735, 611)
-        self.pushButton_simulate.clicked.connect(self.getValues)
-
+        # self.pushButton_simulate.clicked.connect(self.getValues)c
     def getValues(self):
         try:
             # Try to convert the input values to integers
@@ -43,6 +42,7 @@ class MainWindow(QMainWindow, ui):
         except Exception as e:
             # Catch any other exceptions and show the error message
             self.showErrorMessage("Error", f"An unexpected error occurred: {str(e)}")
+            print(e)
             
 
     def showErrorMessage(self, title, message):
