@@ -1,5 +1,6 @@
 import turtle as t
 import math
+from time import sleep
 
 screen = t.Screen()
 # screen.bgcolor("green")
@@ -23,7 +24,7 @@ def simulate_projectile(v0, angle, g=9.8):
     print(f"The the time of flight is {T}s ")
     
     # time chanfges in interval
-    dt = 1
+    dt = 0.4
     
     t = 0
     while t <= T:
@@ -33,6 +34,7 @@ def simulate_projectile(v0, angle, g=9.8):
         # Set the projectile new postiton
         projectile.goto(-300 + x , -100+ y )
         
+        sleep(dt)
         # Increment the time by the small interval
         t += dt
     
@@ -44,7 +46,7 @@ def simulate_projectile(v0, angle, g=9.8):
 
 
 # Set initial conditions
-u0 = 70  # m/s
+u0 = 40  # m/s
 theta = 45 # degrees
 g = 9.8
 
@@ -73,8 +75,8 @@ ball1.goto(-300, -100)
 ball2.goto(-300, -100)
 ball1.pendown()
 ball2.pendown()
-ball1.speed(1)
-ball2.speed(1)
+ball1.speed(3)
+ball2.speed(3)
 
 ball1.forward(R)
 ball2.forward(R/2)
